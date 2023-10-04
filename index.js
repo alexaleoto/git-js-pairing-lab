@@ -80,4 +80,24 @@ const printTime = () => {
     const d = new Date();
     console.log(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
 }
-printTime()
+// printTime()
+
+const isLeapYear = (year)=>{
+    let stringYear = year.toString();
+    if(stringYear[stringYear.length - 1] === "0" && stringYear[stringYear.length - 2] === "0") {
+        if(year % 400 === 0) {
+            return true;
+        } else {
+            return false
+        }
+    } else {
+        if(year % 4 === 0) {
+            return true;
+        } else {
+            return false
+        }
+    }
+};
+console.log(isLeapYear(1900));
+console.log(isLeapYear(2000));
+console.log(isLeapYear(2020));
