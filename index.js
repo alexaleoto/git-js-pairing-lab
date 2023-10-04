@@ -76,3 +76,8 @@ const largest = (num1,num2,num3) => {
     }
 };
 // console.log(largest(1000,200,30));
+const printTime = () => {
+    const d = new Date();
+    console.log(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
+}
+printTime()
