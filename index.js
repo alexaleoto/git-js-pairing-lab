@@ -98,6 +98,41 @@ const isLeapYear = (year)=>{
         }
     }
 };
-console.log(isLeapYear(1900));
-console.log(isLeapYear(2000));
-console.log(isLeapYear(2020));
+// console.log(isLeapYear(1900));
+// console.log(isLeapYear(2000));
+// console.log(isLeapYear(2020));
+
+//14.
+const absoluteNineteen = (num) => {
+    let absDifference = Math.abs(num - 19);
+    return absDifference > 19 ? absDifference * 3 : null;
+}
+// console.log(absoluteNineteen(100));
+
+//16.
+const changeString = (string) => {
+    let lowerAlphabet = "abcdefghijklmnopqrstuvwxyz";
+    let upperAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let newString = "";
+    for (let i = 0; i < string.length; i++) {
+        if(lowerAlphabet.includes(string[i])) {
+            let index = lowerAlphabet.indexOf(string[i]);
+            if(string[i] === "z") {
+                newString+= lowerAlphabet[0]
+            } else {
+                newString+= lowerAlphabet[index + 1]
+            }
+        } else if (upperAlphabet.includes(string[i])) {
+            let index = upperAlphabet.indexOf(string[i]);
+            if(string[i] === "Z") {
+                newString+= upperAlphabet[0]
+            } else {
+                newString+= upperAlphabet[index + 1]
+            }
+        } else {
+            newString+= string[i];
+        }
+    }
+    return newString;
+};
+console.log(changeString("The quick brown fox jumped over the lazy dog"));
