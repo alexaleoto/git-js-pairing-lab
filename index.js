@@ -98,6 +98,19 @@ const isLeapYear = (year)=>{
         }
     }
 };
-console.log(isLeapYear(1900));
-console.log(isLeapYear(2000));
-console.log(isLeapYear(2020));
+//console.log(isLeapYear(1900));
+//console.log(isLeapYear(2000));
+//console.log(isLeapYear(2020));
+
+function getExtension(filename){
+
+
+    const extension = filename.split('.').pop();
+    return extension;
+}
+
+const result1 = getExtension('module.js');
+console.log(result1);
+
+const result2 = getExtension('module.txt');
+console.log(result2);
