@@ -102,15 +102,27 @@ const isLeapYear = (year)=>{
 //console.log(isLeapYear(2000));
 //console.log(isLeapYear(2020));
 
-function getExtension(filename){
+const getExtension = (filename) => {
 
 
     const extension = filename.split('.').pop();
     return extension;
 }
 
-const result1 = getExtension('module.js');
-console.log(result1);
+//const result1 = getExtension('module.js');
+//console.log(result1);
 ///
-const result2 = getExtension('module.txt');
-console.log(result2);
+//const result2 = getExtension('module.txt');
+//console.log(result2);
+
+const switchLetters =(str1) =>
+  {
+  if (str1.length <= 1)
+  {
+    return str1;
+  }
+  char = str1.substring(1, str1.length - 1);
+  return (str1.charAt(str1.length - 1)) + char + str1.charAt(0);
+}
+console.log(switchLetters('ab'));
+console.log(switchLetters('abc'));
