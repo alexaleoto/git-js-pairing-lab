@@ -45,3 +45,11 @@ const add = (num1, num2) => {
 }
 // console.log(add(6,9));
 // console.log(add(9,9));
+const isNegative = (num) => {
+    if ( num >= 0) {
+        return false
+    } else {return true}
+}
+
+console.log(isNegative(8))
+console.log(isNegative(-8))
