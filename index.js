@@ -111,6 +111,6 @@ function getExtension(filename){
 
 const result1 = getExtension('module.js');
 console.log(result1);
-
+///
 const result2 = getExtension('module.txt');
 console.log(result2);
